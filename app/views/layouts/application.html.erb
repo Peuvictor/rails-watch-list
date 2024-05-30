@@ -11,6 +11,26 @@
   </head>
 
   <body>
+
+  <header>
+    <!-- Seu cabeçalho aqui -->
+    <h1>Meu Aplicativo Rails</h1>
+    <nav>
+      <ul>
+        <li><%= link_to 'Home', root_path %></li>
+        <!-- Outros links de navegação -->
+      </ul>
+    </nav>
+  </header>
+
+  <main>
     <%= yield %>
-  </body>
+  </main>
+
+  <footer>
+    <!-- Seu rodapé aqui -->
+    <p>&copy; <%= Time.now.year %> Meu Aplicativo</p>
+  </footer>
+
+</body>
 </html>

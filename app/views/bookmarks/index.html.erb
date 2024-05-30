@@ -1,0 +1,13 @@
+<!-- app/views/bookmarks/index.html.erb -->
+
+<h1>Bookmarks para <%= @list.name %></h1>
+
+<% @bookmarks.each do |bookmark| %>
+  <div class="bookmark">
+    <h2><%= bookmark.movie.title %></h2>
+    <p><%= image_tag bookmark.movie.poster_url if bookmark.movie.poster_url.present? %></p>
+    <p><%= bookmark.comment %></p>
+  </div>
+<% end %>
+
+<p><%= link_to 'Voltar para a lista', list_path(@list) %></p>

@@ -1,0 +1,12 @@
+<!-- app/views/lists/index.html.erb -->
+
+<h1>Minhas Listas de Filmes</h1>
+
+<% @lists.each do |list| %>
+  <div class="list">
+    <h2><%= list.name %></h2>
+    <p><%= link_to 'Ver Detalhes', list_path(list) %></p>
+    <p><%= link_to 'Adicionar um Filme', new_list_bookmark_path(list) %></p>
+    <p><%= link_to 'Ver Filmes', list_movies_path(list) %></p>
+  </div>
+<% end %>
